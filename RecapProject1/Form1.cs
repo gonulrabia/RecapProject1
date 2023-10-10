@@ -49,9 +49,9 @@ namespace RecapProject1
         {
             using (NorthwindContext context = new NorthwindContext())
             {
-                cbxKategori.DataSource = context.Categories.ToList();
-                cbxKategori.DisplayMember = "CategoryName";
-                cbxKategori.ValueMember = "CategoryId";
+                cbxCategory.DataSource = context.Categories.ToList();
+                cbxCategory.DisplayMember = "CategoryName";
+                cbxCategory.ValueMember = "CategoryId";
             }
         }
 
@@ -59,7 +59,7 @@ namespace RecapProject1
         {
             try 
             {
-                ListProductsByCategory(Convert.ToInt32(cbxKategori.SelectedValue));
+                ListProductsByCategory(Convert.ToInt32(cbxCategory.SelectedValue));
             }
             catch { }
 

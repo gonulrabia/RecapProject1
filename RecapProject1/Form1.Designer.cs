@@ -30,11 +30,11 @@ namespace RecapProject1
         private void InitializeComponent()
         {
             this.gbxCategory = new System.Windows.Forms.GroupBox();
-            this.cbxKategori = new System.Windows.Forms.ComboBox();
-            this.lblKategori = new System.Windows.Forms.Label();
+            this.lblCategory = new System.Windows.Forms.Label();
+            this.cbxCategory = new System.Windows.Forms.ComboBox();
             this.gbxSearch = new System.Windows.Forms.GroupBox();
-            this.lblSearch = new System.Windows.Forms.Label();
             this.tbcSearch = new System.Windows.Forms.TextBox();
+            this.lblSearch = new System.Windows.Forms.Label();
             this.dgwProduct = new System.Windows.Forms.DataGridView();
             this.gbxCategory.SuspendLayout();
             this.gbxSearch.SuspendLayout();
@@ -43,8 +43,8 @@ namespace RecapProject1
             // 
             // gbxCategory
             // 
-            this.gbxCategory.Controls.Add(this.lblKategori);
-            this.gbxCategory.Controls.Add(this.cbxKategori);
+            this.gbxCategory.Controls.Add(this.lblCategory);
+            this.gbxCategory.Controls.Add(this.cbxCategory);
             this.gbxCategory.Location = new System.Drawing.Point(12, 42);
             this.gbxCategory.Name = "gbxCategory";
             this.gbxCategory.Size = new System.Drawing.Size(761, 93);
@@ -52,23 +52,23 @@ namespace RecapProject1
             this.gbxCategory.TabStop = false;
             this.gbxCategory.Text = "Kategoriye Göre Listele";
             // 
-            // cbxKategori
+            // lblCategory
             // 
-            this.cbxKategori.FormattingEnabled = true;
-            this.cbxKategori.Location = new System.Drawing.Point(81, 46);
-            this.cbxKategori.Name = "cbxKategori";
-            this.cbxKategori.Size = new System.Drawing.Size(204, 21);
-            this.cbxKategori.TabIndex = 0;
-            this.cbxKategori.SelectedIndexChanged += new System.EventHandler(this.cbxKategori_SelectedIndexChanged);
+            this.lblCategory.AutoSize = true;
+            this.lblCategory.Location = new System.Drawing.Point(25, 49);
+            this.lblCategory.Name = "lblCategory";
+            this.lblCategory.Size = new System.Drawing.Size(55, 13);
+            this.lblCategory.TabIndex = 1;
+            this.lblCategory.Text = "Kategori : ";
             // 
-            // lblKategori
+            // cbxCategory
             // 
-            this.lblKategori.AutoSize = true;
-            this.lblKategori.Location = new System.Drawing.Point(25, 49);
-            this.lblKategori.Name = "lblKategori";
-            this.lblKategori.Size = new System.Drawing.Size(55, 13);
-            this.lblKategori.TabIndex = 1;
-            this.lblKategori.Text = "Kategori : ";
+            this.cbxCategory.FormattingEnabled = true;
+            this.cbxCategory.Location = new System.Drawing.Point(81, 46);
+            this.cbxCategory.Name = "cbxCategory";
+            this.cbxCategory.Size = new System.Drawing.Size(204, 21);
+            this.cbxCategory.TabIndex = 0;
+            this.cbxCategory.SelectedIndexChanged += new System.EventHandler(this.cbxKategori_SelectedIndexChanged);
             // 
             // gbxSearch
             // 
@@ -81,6 +81,14 @@ namespace RecapProject1
             this.gbxSearch.TabStop = false;
             this.gbxSearch.Text = "Ürün İsmine Göre Ara";
             // 
+            // tbcSearch
+            // 
+            this.tbcSearch.Location = new System.Drawing.Point(81, 41);
+            this.tbcSearch.Name = "tbcSearch";
+            this.tbcSearch.Size = new System.Drawing.Size(204, 20);
+            this.tbcSearch.TabIndex = 3;
+            this.tbcSearch.TextChanged += new System.EventHandler(this.tbcSearch_TextChanged);
+            // 
             // lblSearch
             // 
             this.lblSearch.AutoSize = true;
@@ -89,14 +97,6 @@ namespace RecapProject1
             this.lblSearch.Size = new System.Drawing.Size(32, 13);
             this.lblSearch.TabIndex = 2;
             this.lblSearch.Text = "Ara : ";
-            // 
-            // tbcSearch
-            // 
-            this.tbcSearch.Location = new System.Drawing.Point(81, 41);
-            this.tbcSearch.Name = "tbcSearch";
-            this.tbcSearch.Size = new System.Drawing.Size(204, 20);
-            this.tbcSearch.TabIndex = 3;
-            this.tbcSearch.TextChanged += new System.EventHandler(this.tbcSearch_TextChanged);
             // 
             // dgwProduct
             // 
@@ -129,8 +129,8 @@ namespace RecapProject1
         #endregion
 
         private System.Windows.Forms.GroupBox gbxCategory;
-        private System.Windows.Forms.Label lblKategori;
-        private System.Windows.Forms.ComboBox cbxKategori;
+        private System.Windows.Forms.Label lblCategory;
+        private System.Windows.Forms.ComboBox cbxCategory;
         private System.Windows.Forms.GroupBox gbxSearch;
         private System.Windows.Forms.TextBox tbcSearch;
         private System.Windows.Forms.Label lblSearch;
